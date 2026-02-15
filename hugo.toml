@@ -1,0 +1,47 @@
+baseURL = "https://selcuksportshd.app"
+languageCode = "tr-TR"
+title = "SelçukSports Apk v2.0.3.0 İndir (En Son Sürüm) Android 2026 - Selcuksportshd.app"
+theme = "Mango"
+
+[params]
+  # ⭐ Default SEO (Homepage + Fallback)
+  defaultDescription = "SelçukSports APK'nın en son sürümü olan v2.0.3.0'ı 2026 yılında indirin ve canlı spor güncellemelerini, maç özetlerini, TV kanallarını, filmleri ve dizileri ücretsiz izleyin. SelçukSports APK'yı şimdi edinin."
+  defaultKeywords = [
+    "SelçukSports APK",
+    "SelçukSports indir",
+    "SelçukSports Android",
+    "canlı spor izle",
+    "spor APK indir",
+    "SelçukSports v2.0.3.0"
+  ]
+
+  author = "SelcukSportsHD."
+  version = "2.0.3.0"
+  update_date = "July 17, 2025"
+  file_size = "45 MB"
+  android_version = "5.0 and up"
+  downloads = "50,000+"
+  content_rating = "4.4"
+  developer = "RECORD."
+
+[menu]
+
+  [[menu.main]]
+    name = "Özellikler"
+    url = "#features"
+    weight = 1
+
+  [[menu.main]]
+    name = "Ekran görüntüleri"
+    url = "#screenshots"
+    weight = 2
+
+  [[menu.main]]
+    name = "İndir"
+    url = "#download"
+    weight = 3
+
+  [[menu.main]]
+    name = "SSS"
+    url = "#faq"
+    weight = 4
