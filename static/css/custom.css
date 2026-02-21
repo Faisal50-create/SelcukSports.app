@@ -134,7 +134,10 @@ header {
 
 .logo span {
     color: var(--text);
+<<<<<<< HEAD
     
+=======
+>>>>>>> e65c7e837718821dd3e02b68726a0a9c925f3ae5
 }
 
 nav ul {
@@ -690,6 +693,7 @@ footer {
         grid-template-columns: 1fr;
     }
     
+<<<<<<< HEAD
     .app-icon img {
         width: 100px;
         height: 100px;
@@ -700,6 +704,13 @@ footer {
     .logo span {
     color: var(--text);
     font-size: 18px;
+=======
+    .app-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+       
+>>>>>>> e65c7e837718821dd3e02b68726a0a9c925f3ae5
     }
 }
 
