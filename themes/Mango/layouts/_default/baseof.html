@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+
+    {{ partial "header.html" . }}
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <!-- ✅ Defer JS -->
+    <script src="{{ "js/main.js" | relURL }}" defer></script>
+
+</body>
+</html>

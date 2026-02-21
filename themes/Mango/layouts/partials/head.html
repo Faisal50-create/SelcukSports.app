@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+
+<meta name="description" content="{{ if .IsHome }}{{ site.Params.defaultDescription }}{{ else }}{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.defaultDescription }}{{ end }}{{ end }}">
+
+<meta name="keywords" content="{{ if .IsHome }}{{ delimit site.Params.defaultKeywords ", " }}{{ else }}{{ with .Params.keywords }}{{ delimit . ", " }}{{ else }}{{ delimit site.Params.defaultKeywords ", " }}{{ end }}{{ end }}">
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Preload CSS -->
+<link rel="preload" href="{{ "css/custom.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+</noscript>
+
+<!-- ⭐ Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ site.Params.defaultDescription }}{{ else }}{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.defaultDescription }}{{ end }}{{ end }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+
+<!-- ⭐ Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ if .IsHome }}{{ site.Params.defaultDescription }}{{ else }}{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.defaultDescription }}{{ end }}{{ end }}">
