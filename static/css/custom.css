@@ -498,6 +498,10 @@ nav a:hover{color:var(--accent)}
   gap:20px;
   flex-wrap:wrap
 }
+  .btn-success {
+    background: #198754;
+}
+
 .download-card{
   background:var(--card);
   border-radius:10px;
