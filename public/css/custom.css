@@ -19,7 +19,7 @@ a{text-decoration:none;color:inherit}
 ul{list-style:none}
 
 /* =========================
-   VARIABLES (minimal)
+   VARIABLES
 ========================= */
 :root{
   --primary:#0a0a23;
@@ -29,7 +29,8 @@ ul{list-style:none}
   --text-light:#b3b3b3;
   --card:#141432;
   --success:#00cc66;
-  --shadow:0 2px 10px rgba(0,0,0,0.2)
+  --shadow:0 2px 10px rgba(0,0,0,0.2);
+  --shadow-lg:0 15px 30px rgba(0,0,0,0.3)
 }
 
 /* =========================
@@ -78,7 +79,7 @@ ul{list-style:none}
 .btn-success:hover{background:#00b359}
 
 /* =========================
-   HEADER (fixed position restored)
+   HEADER
 ========================= */
 header{
   position:fixed;
@@ -116,55 +117,200 @@ nav a:hover{color:var(--accent)}
 }
 
 /* =========================
-   HERO
+   HERO SECTION - UPDATED WITH CARD DESIGN
+   (Maintains desktop layout while adding card)
 ========================= */
-.hero{
-  background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
-  background-size:cover;
-  background-position:center;
-  padding:180px 0 100px;
-  text-align:center
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+  background-size: cover;
+  background-position: center;
+  padding: 180px 0 100px;
+  text-align: center;
+  min-height: auto;
+  position: relative;
 }
-.hero-content{max-width:800px;margin:0 auto}
-.hero h1{
-  font-size:20px;
-  margin-bottom:20px;
-  line-height:1.2
+
+/* Only apply special card styling to the specific hero section */
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.hero p{
-  font-size:1.2rem;
-  margin-bottom:30px;
-  color:var(--text-light)
+
+/* App Card - Only affects hero section */
+.hero .app-card {
+  background: rgba(20, 20, 50, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  box-shadow: var(--shadow-lg);
+  transition: .3s;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
-.version-badge{
-  display:inline-block;
-  background:var(--secondary);
-  padding:5px 15px;
-  border-radius:20px;
-  font-size:.9rem;
-  margin-bottom:20px;
-  color:var(--text-light)
+
+.hero .app-card:hover {
+  transform: translateY(-5px);
 }
-.hero-buttons{
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  margin-bottom:40px;
-  flex-wrap:wrap
+
+.hero .app-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.hero-stats{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-top:40px;
-  flex-wrap:wrap
+
+.hero .app-card-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(229, 9, 20, 0.3);
+  flex-shrink: 0;
 }
-.stat-number{
-  font-size:2rem;
-  font-weight:700;
-  color:var(--accent)
+
+.hero .app-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: white;
+  margin: 0;
 }
-.stat-label{font-size:.9rem;color:var(--text-light)}
+
+/* App Info Grid */
+.hero .app-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.hero .info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero .info-label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero .info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* App Badge */
+.hero .app-badge {
+  background: linear-gradient(90deg, #2a2a4a, #1a1a3a);
+  border-radius: 40px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(229, 9, 20, 0.5);
+}
+
+.hero .badge-icon {
+  font-size: 1.2rem;
+}
+
+.hero .badge-text {
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+/* Hero Description */
+.hero .hero-description {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-left: 4px solid var(--accent);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.hero .hero-description p {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.hero .hero-description p:last-child {
+  margin-bottom: 0;
+}
+
+.hero .highlight-box {
+  background: rgba(229, 9, 20, 0.1);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.hero .highlight-box p {
+  margin: 0;
+  color: white;
+}
+
+/* Version Badge */
+.hero .version-badge-wrapper {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.hero .version-badge {
+  display: inline-block;
+  background: var(--secondary);
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hero Buttons - Keep original styling */
+.hero .hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* Stats */
+.hero .hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.hero .stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero .stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
 
 /* =========================
    SECTION HEADERS
@@ -212,7 +358,7 @@ nav a:hover{color:var(--accent)}
 }
 .feature-card:hover{
   transform:translateY(-10px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.3)
+  box-shadow:var(--shadow-lg)
 }
 .feature-icon{
   width:60px;
@@ -503,13 +649,14 @@ footer{
 }
 
 /* =========================
-   RESPONSIVE (optimized breakpoints)
+   RESPONSIVE (Optimized for all devices)
 ========================= */
 @media(max-width:992px){
   .hero h1{font-size:2.8rem}
   .section-title{font-size:2rem}
   .post h1{font-size:2.2rem}
 }
+
 @media(max-width:768px){
   .mobile-menu-btn{display:block;margin-right:20px}
   nav{
@@ -530,13 +677,13 @@ footer{
   .hero h1{font-size:2.2rem}
   .hero-buttons{flex-direction:column;align-items:center}
   .hero-stats{gap:20px}
-  .app-info{padding:30px 20px}
-  .download-section{padding:40px 20px}
-  .download-section h2{font-size:2rem}
-  .rating-title{font-size:1.05rem}
-  .stars{font-size:1.5rem}
-  .rating-text{font-size:.95rem}
+  
+  /* Card responsive for tablet */
+  .hero .app-card-title{font-size:1rem}
+  .hero .app-info-grid{gap:12px}
 }
+
+/* Small Mobile */
 @media(max-width:576px){
   .hero h1{font-size:1.8rem}
   .section-title{font-size:1.6rem}
@@ -546,11 +693,44 @@ footer{
   .post h1{font-size:1.8rem}
   .download-section h2{font-size:1.8rem}
   .download-card{width:100%;max-width:280px}
+  
+  /* Card mobile styles */
+  .hero .app-card-header{
+    flex-direction:column;
+    text-align:center;
+    gap:12px
+  }
+  .hero .app-card-logo{
+    width:70px;
+    height:70px
+  }
+  .hero .app-info-grid{
+    grid-template-columns:1fr;
+    gap:10px
+  }
+  .hero .info-row{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,0.05)
+  }
+  .hero .info-row:last-child{border-bottom:none}
+  .hero .hero-description{padding:18px}
+  .hero .hero-description p{font-size:.95rem}
 }
+
+/* Extra Small Mobile */
 @media(max-width:375px){
   .hero h1{font-size:1.5rem}
   .hero p{font-size:1rem}
   .btn-large{padding:12px 30px;font-size:1rem}
+  
+  /* Card extra small adjustments */
+  .hero .app-card{padding:18px}
+  .hero .app-card-logo{width:60px;height:60px}
+  .hero .badge-text{font-size:.8rem}
+  .hero .stat-number{font-size:1.4rem}
 }
 
 /* =========================
