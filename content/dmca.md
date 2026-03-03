@@ -31,5 +31,5 @@ Geçerli DMCA bildirimlerini aldıktan sonra, ihlal ettiği iddia edilen içerik
 Telif hakkı ihlali bildirimlerinin ciddi hukuki sonuçlar doğurabileceğini ve yanlış veya yanıltıcı bildirimlerin yasal sorumluluk oluşturabileceğini lütfen unutmayınız.
 
 ## İletişim Bilgileri
-Web Sitesi: selcuksportshd.app
-E-posta: selcuksportsapp@gmail.com
+**Web Sitesi: selcuksportshd.app**
+**E-posta: selcuksportsapp@gmail.com**
